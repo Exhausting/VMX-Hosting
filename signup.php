@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<?php
+session_start();
+?>
+
 <html>
 <head>
   <title>VMX Hosting</title>
@@ -50,36 +54,32 @@
         <form>
           <div class="form-group">
             <label for="firstName">First Name</label>
-            <input type="text" class="form-control" id="firtName" placeholder="First Name" required>
+            <input type="text" class="form-control" id="firtName" name="form_naam" placeholder="First Name" required>
           </div>
           <div class="form-group">
             <label for="lastName">Last Name</label>
-            <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
+            <input type="text" class="form-control" id="lastName" name="form_achternaam" placeholder="Last Name" required>
           </div>
           <div class="form-group">
             <label for="organization">Organization (optional)</label>
-            <input type="text" class="form-control" id="organization" placeholder="Optional">
+            <input type="text" class="form-control" id="organization" name="form_bedrijf" placeholder="Optional">
           </div>
           <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" class="form-control" id="email" placeholder="Email" required>
+            <input type="email" class="form-control" id="email" name="form_email" placeholder="Email" required>
           </div>
           <div class="form-group">
             <p class="help-block">Passwords must be a minimum of 8 characters long, and include at least 1 uppercase letter, 1 lowercase letter, and 1 number. Please note: do not include your username, or part of your username, in your password.</p>
             <label for="password">Password</label>
-            <input type="password" class="form-control" id="pasword" placeholder="Password" pattern=".{8,255}" title="Passwords must be a minimum of 8 characters long, and include at least 1 uppercase letter, 1 lowercase letter, and 1 number. Please note: do not include your username, or part of your username, in your password." required>
+            <input type="password" class="form-control" id="pasword" name="form_wachtwoord" placeholder="Password" pattern=".{8,255}" title="Passwords must be a minimum of 8 characters long, and include at least 1 uppercase letter, 1 lowercase letter, and 1 number. Please note: do not include your username, or part of your username, in your password." required>
           </div>
-          <div>
-            <label for="passwordConfirm">Confirm Password</label>
-            <input type="password" class="form-control" id="passwordConfirm" placeholder="Confirm Password">
-          </div>
-          <div class="checkbox">
+              <div class="checkbox">
             <label><input type="checkbox"> I accept the <a href="#">Terms of Conditions</a></label>
           </div>
-          <button type="submit" class="btn btn-default">Submit</button>
+          <button type="submit" name="submit" class="btn btn-default">Submit</button>
         </form>
         <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
-      </div> 
+      </div>
     </div>
   </div>
 </div>
@@ -119,7 +119,7 @@
             <li><a href="#">About us 2</a></li>
           </ul>
         </div>
-      </div>  
+      </div>
     </div>
   </div>
 </div>
