@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+<?php
+session_start();
+?>
+
+
+
 <html>
 <head>
 	<title></title>
@@ -8,11 +13,11 @@
   <script src="https://use.fontawesome.com/f288586ec5.js"></script>
 </head>
 <body>
-
-<!-- Start of Menu -->
+<?php include('nav-bar.php') ?>
+<!--
 <nav class="navbar navbar-default">
   <div class="container">
-    <!-- Brand and toggle get grouped for better mobile display -->
+    //Brand and toggle get grouped for better mobile display
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
@@ -23,7 +28,7 @@
       <a class="navbar-brand" href="index.html">VMX Hosting</a>
     </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
+  //   Collect the nav links, forms, and other content for toggling
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a href="index.html">Home</a></li>
@@ -34,10 +39,11 @@
         <li><a href="signup.html">Sign Up <i class="fa fa-user-plus" aria-hidden="true"></i></a></li>
         <li class="active"><a href="login.html">Login <i class="fa fa-user" aria-hidden="true"></i></a></li>
       </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+    </div>< // /.navbar-collapse
+  </div> // /.container-fluid
 </nav>
-<!-- End of Menu -->
+// End of Menu
+ -->
 
 <div class="container bgim-1">
   <div class="row">
@@ -48,16 +54,16 @@
 				<form>
 				  <div class="form-group">
 				    <label for="email">Email address</label>
-				    <input type="email" class="form-control" id="email" placeholder="Email">
+				    <input type="email" class="form-control" name='email' id="email" placeholder="Email">
 				  </div>
-				  <div class="form-group">	
+				  <div class="form-group">
 				    <label for="password">Password</label>
-				    <input type="password" class="form-control" id="password" placeholder="Password">
+				    <input type="password" class="form-control" name='password' id="password" placeholder="Password">
 				  </div>
 				  <div class="checkbox">
 				    <label><input type="checkbox"> Remember me</label>
 				  </div>
-				  <button type="submit" class="btn btn-default" formaction="dashboard.html">Submit</button>
+				  <button type="submit" class="btn btn-default" name='login' formaction="dashboard.html">Submit</button>
 				</form>
 			</div>
 		</div>
@@ -98,7 +104,7 @@
             <li><a href="#">About us 2</a></li>
           </ul>
         </div>
-      </div>  
+      </div>
     </div>
   </div>
 </div>
