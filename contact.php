@@ -26,19 +26,19 @@ session_start();
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">VMX Hosting</a>
+      <a class="navbar-brand" href="index.php">VMX Hosting</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.php">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li class="active"><a href="contact.html">Contact</a></li>
+        <li class="active"><a href="contact.php">Contact</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="signup.html">Sign Up <i class="fa fa-user-plus" aria-hidden="true"></i></a></li>
-        <li><a href="login.html">Login <i class="fa fa-user" aria-hidden="true"></i></a></li>
+        <li><a href="signup.php">Sign Up <i class="fa fa-user-plus" aria-hidden="true"></i></a></li>
+        <li><a href="login.php">Login <i class="fa fa-user" aria-hidden="true"></i></a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
