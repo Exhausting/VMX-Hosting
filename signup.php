@@ -5,6 +5,8 @@ session_start();
 
 <html>
 <head>
+  // INCLUDE NAV vanuit session_start
+  <?php include('head.php') ?>
   <title>VMX Hosting</title>
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -12,7 +14,7 @@ session_start();
   <script src="https://use.fontawesome.com/f288586ec5.js"></script>
 </head>
 <body>
-
+<?php include('nav-bar.php') ?>
 <!-- Start of Menu -->
 <nav class="navbar navbar-default">
   <div class="container">

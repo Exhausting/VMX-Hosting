@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+
+<?php
+session_start();
+?>
+
 <html>
 <head>
 	<title>Contact us</title>
@@ -8,6 +12,8 @@
   <script src="https://use.fontawesome.com/f288586ec5.js"></script>
 </head>
 <body>
+	//NAV
+	<?php include('nav-bar.php') ?>
 
 <!-- Start of Menu -->
 <nav class="navbar navbar-default">
@@ -44,8 +50,8 @@
     <div class="col-lg-5"></div>
     <div class="col-lg-2">
       <div id="mapHeader">
-        <h3>Where we are</h3>  
-      </div>  
+        <h3>Where we are</h3>
+      </div>
     </div>
     <div id="map"></div>
     <script>
@@ -65,6 +71,70 @@
 </div>
 
 
+//ADD CONTACT.
+<div class="container">
+            <h1>Contact</h1>
+<form action="smtp.php" class="well form-horizontal" method="POST">
+
+<div class="form-group">
+                    <label class="col-md-5 control-label">Naam:</label>
+                    <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    <input type="text" class="form-control" id="Naam" name="contact_form_naam" required>
+                </div>
+                    </div>
+
+
+    <label class="col-md-5 control-label">Email:</label>
+                    <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                    <input type="text" class="form-control" id="email" name="contact_form_email" required>
+                </div>
+                    </div>
+
+
+    <label class="col-md-5 control-label">Phone:</label>
+                    <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+                    <input type="text" class="form-control" id="telefoon" name="contact_form_telefoon" required>
+                </div>
+                    </div>
+
+
+<label class="col-md-5 control-label">Subject:</label>
+                    <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"></span>
+                    <input type="text" class="form-control" id="onderwerp" name="contact_form_onderwerp" required>
+                </div>
+                    </div>
+
+
+<label class="col-md-5 control-label">Comment:</label>
+                    <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"></span>
+                <textarea class="form-control" id="exampleTextarea" rows="4" name="contact_form_text"></textarea>
+
+                </div>
+                    </div>
+
+  <div class="form-group">
+                            <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+
+                                <button type="submit" class="btn btn-primary" name="submit" value="Submit">Submit</button>
+                            </div>
+                        </div>
+                        </div>
+
+
+</div>
+</form>
+</div>
 <!-- Start of Footer -->
 <div class="footer">
   <div class="footerContent">
@@ -99,13 +169,13 @@
             <li><a href="#">About us 2</a></li>
           </ul>
         </div>
-      </div>  
+      </div>
     </div>
   </div>
 </div>
 <!-- End of Footer -->
 
-<script async defer 
+<script async defer
 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDt67W5eE2BoAi-c1_Qe-5AcBTJbpA0lT8&callback=initMap">
 </script>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>

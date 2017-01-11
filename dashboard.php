@@ -1,4 +1,28 @@
-<!DOCTYPE html>
+
+<?php
+
+session_start();
+
+if (isset($_SESSION["login"]) && $_SESSION["login"] == true){
+
+include('head.php');
+include('nav-bar.php');
+
+
+$gebruiker = $_SESSION['naam'];
+echo "Welkom $gebruiker in het Dashboard.";
+
+
+
+}else{
+
+
+    echo '<h1>You are not an authorised user</h1>';
+    echo '<h2>Please sign in on the <a href="index.php">Homepage</a></h2>';
+
+}
+?>
+
 <html>
 <head>
 	<title>Contact us</title>
@@ -9,10 +33,10 @@
 </head>
 <body>
 
-<!-- Start of Menu -->
+<!-- Start of Menu
 <nav class="navbar navbar-default">
   <div class="container">
-    <!-- Brand and toggle get grouped for better mobile display -->
+    // Brand and toggle get grouped for better mobile display
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
@@ -23,7 +47,7 @@
       <a class="navbar-brand" href="index.html">VMX Hosting</a>
     </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
+    // Collect the nav links, forms, and other content for toggling
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a href="index.html">Home</a></li>
@@ -35,10 +59,10 @@
         <li><a href="create.html">Create VM</a></li>
         <li><a href="index.html">Log Out <i class="fa fa-door" aria-hidden="true"></i></a></li>
       </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+    </div>// /.navbar-collapse
+  </div> // /.container-fluid
 </nav>
-<!-- End of Menu -->
+// End of Menu -->
 
 <div class="content1">
   <div class="row">
@@ -98,7 +122,7 @@
             <li><a href="#">About us 2</a></li>
           </ul>
         </div>
-      </div>  
+      </div>
     </div>
   </div>
 </div>
