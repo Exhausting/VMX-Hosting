@@ -63,7 +63,7 @@ session_start();
 </div>
 
 <div class= "row">
-<hr class="primary" id="product">
+<hr class="primary">
 </div>
 
 
