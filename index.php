@@ -64,8 +64,8 @@ session_start();
 
 <div class= "row">
 <hr class="primary" id="product">
-<h2>Products<h2>
-            </div>
+</div>
+
 
     <div class="container">
 <div class="row">
