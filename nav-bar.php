@@ -51,7 +51,7 @@ echo'
 
 
                 </ul>
-                <form method="post" action="PHP/login.php" id="signin" class="navbar-form navbar-right" role="form">
+                <form method="post" action="login-sql.php" id="signin" class="navbar-form navbar-right" role="form">
 
                     <div class="input-group">
 

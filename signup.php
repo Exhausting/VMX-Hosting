@@ -5,8 +5,7 @@ session_start();
 
 <html>
 <head>
-  // INCLUDE NAV vanuit session_start
-  <?php include('head.php') ?>
+
   <title>VMX Hosting</title>
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -15,10 +14,10 @@ session_start();
 </head>
 <body>
 <?php include('nav-bar.php') ?>
-<!-- Start of Menu -->
+<!--
 <nav class="navbar navbar-default">
   <div class="container">
-    <!-- Brand and toggle get grouped for better mobile display -->
+    Brand and toggle get grouped for better mobile display
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
@@ -29,7 +28,7 @@ session_start();
       <a class="navbar-brand" href="index.html">VMX Hosting</a>
     </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
+     Collect the nav links, forms, and other content for toggling
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a href="index.html">Home</a></li>
@@ -40,10 +39,10 @@ session_start();
         <li class="active"><a href="signup.html">Sign Up <i class="fa fa-user-plus" aria-hidden="true"></i></a></li>
         <li><a href="login.html">Login <i class="fa fa-user" aria-hidden="true"></i></a></li>
       </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+    </div>/.navbar-collapse
+  </div> /.container-fluid
 </nav>
-<!-- End of Menu -->
+ End of Menu -->
 
 
 <div class="container bgim-1">
@@ -53,7 +52,7 @@ session_start();
       <div id="form">
         <h2>Create Account</h2>
 
-        <form action="PHP/User-register.php" method="post">
+        <form action="User-register.php" method="post">
           <div class="form-group">
             <label for="firstName">First Name</label>
             <input type="text" class="form-control" id="firtName" name="form_naam" placeholder="First Name" required>
