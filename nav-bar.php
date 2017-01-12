@@ -46,12 +46,12 @@ echo'
                 <ul class="nav navbar-nav">
 
                         <li><a href="index.php">Home</a></li>
-                        <li><a href="User-register.php">Register</a></li>
+                        <li><a href="signup.php">Register</a></li>
                         <li><a href="contact.php">Support</a></li>
 
 
                 </ul>
-                <form method="post" action="login.php" id="signin" class="navbar-form navbar-right" role="form">
+                <form method="post" action="PHP/login.php" id="signin" class="navbar-form navbar-right" role="form">
 
                     <div class="input-group">
 
