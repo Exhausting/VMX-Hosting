@@ -1,6 +1,6 @@
 <?php
 
-     require"startdb.php";
+     require"PHP/startdb.php";
 
    if(isset($_POST['submit'])){
         $naam = $_POST['form_naam'];
@@ -23,7 +23,7 @@
 $stmt = $conn->prepare("insert into Customer (Naam, Achternaam, Tussenvoegsel, Email, Telefoon, Bedrijf, Adres, Huisnummer, Toevoeging, Wachtwoord) VALUES (?,?,?,?,?,?,?,?,?,?)");
 
 // Parameter mee geven uit het form.
-$stmt->bind_param("ssssississ", $naam, $achternaam, $tussenvoegsel, $email, $telefoon, $bedrijf, $adres, $huisnummer, $toevoeging, $hash);
+$stmt->bind_param("sssss", $naam, $achternaam, $email, $bedrijf, $hash);
 
 // SQL Query uitvoeren.
 $result = $stmt->execute();

@@ -53,7 +53,7 @@ session_start();
       <div id="form">
         <h2>Create Account</h2>
 
-        <form action="User-register.php" method="post">
+        <form action="PHP/User-register.php" method="post">
           <div class="form-group">
             <label for="firstName">First Name</label>
             <input type="text" class="form-control" id="firtName" name="form_naam" placeholder="First Name" required>
