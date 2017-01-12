@@ -1,6 +1,5 @@
 <?php
-error_reporting(E_ALL);
-
+session_start();
      require"startdb.php";
 
    if(isset($_POST['submit'])){
@@ -28,10 +27,10 @@ $stmt->bind_param("sssss", $naam, $achternaam, $email, $bedrijf, $hash);
 
 // SQL Query uitvoeren.
 $result = $stmt->execute();
-echo "Error:\n";
-    print_r($stmt->error_list);
        if ($result === TRUE) {
            echo "New record created successfully";
+           $_SESSION["login"] = true;
+           $_SESSION["naam"] = $getdbpass["Naam"];
     header( "refresh:2;url=index.php" );
        }else {
            echo "Failed to write data to the database. Please try again.";

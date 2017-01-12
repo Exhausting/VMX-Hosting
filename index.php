@@ -56,7 +56,6 @@ session_start();
         <hr>
         <form>
           <button type="submit" class="btn-default btn-lg" formaction="signup.php"><i class="fa fa-user-plus" aria-hidden="true"></i> Get Started!</button>
-          <button type="submit" class="btn-default btn-lg" formaction="login.php"><i class="fa fa-user" aria-hidden="true"></i> Or Login!</button>
         </form>
       </div>
     </div>
