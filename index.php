@@ -6,43 +6,13 @@ session_start();
 <html>
 <head>
   <title>VMX Hosting</title>
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet"/>
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
-  <link rel="stylesheet" href="css/vmx.css"/>
-  <script src="https://use.fontawesome.com/f288586ec5.js"></script>
+  <?php include('head.php') ?>
 </head>
 <body>
-<?php include('nav-bar.php') ?>
-<!-- Start of Menu-->
-<!--
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-     Brand and toggle get grouped for better mobile display
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="index.html">VMX Hosting</a>
-    </div>
 
-    Collect the nav links, forms, and other content for toggling
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="signup.php">Sign Up <i class="fa fa-user-plus" aria-hidden="true"></i></a></li>
-        <li><a href="login.html">Login <i class="fa fa-user" aria-hidden="true"></i></a></li>
-      </ul>
-  //  </div><! /.navbar-collapse >
-//  </div><! /.container-fluid >
-</nav>
-//End of Menu -->
+<!-- Start of Menu
+<?php include('nav-bar.php') ?>
+End of Menu -->
 
 <!-- Parallax VMX Site -->
 
@@ -134,47 +104,9 @@ session_start();
 </div>
 
 <!-- Start of Footer -->
-<div class="footer">
-  <div class="footerContent">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-2 col-sm-3">
-          <h3>VMX Hosting</h3>
-          <ul>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">About us 2</a></li>
-          </ul>
-        </div>
-        <div class="col-md-2 col-sm-3">
-          <h3>VMX Hosting</h3>
-          <ul>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">About us 2</a></li>
-          </ul>
-        </div>
-        <div class="col-md-2 col-sm-3">
-          <h3>VMX Hosting</h3>
-          <ul>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">About us 2</a></li>
-          </ul>
-        </div>
-        <div class="col-md-2 col-sm-3">
-          <h3>VMX Hosting</h3>
-          <ul>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">About us 2</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<?php include("footer.php") ?>
 <!-- End of Footer -->
 
-<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 </body>
 </html>
