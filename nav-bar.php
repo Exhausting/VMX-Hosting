@@ -26,7 +26,7 @@ echo'
             </div>
 
         </nav>
-        
+
 ';}
 
 
@@ -39,7 +39,7 @@ echo'
 
                 <div class="navbar-header">
 
-                    <a class="navbar-brand" href="index.php">SMX</a>
+                    <a class="navbar-brand" href="index.php">VMX</a>
 
                 </div>
 
@@ -48,7 +48,7 @@ echo'
                         <li><a href="index.php">Home</a></li>
                         <li><a href="User-register.php">Register</a></li>
                         <li><a href="contact.php">Support</a></li>
-                        
+
 
                 </ul>
                 <form method="post" action="login.php" id="signin" class="navbar-form navbar-right" role="form">
