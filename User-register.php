@@ -1,6 +1,6 @@
 <?php
 
-     require"../PHP/startdb.php";
+     require"startdb.php";
 
    if(isset($_POST['submit'])){
         $naam = $_POST['form_naam'];

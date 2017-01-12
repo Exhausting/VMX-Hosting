@@ -51,7 +51,7 @@ session_start();
     <div class="col-lg-6">
     	<div id="form">
 				<h2>Log in</h2>
-				<form method="post" action="PHP/login.php" id="signin" class="navbar-form navbar-right" role="form">
+				<form method="post" action="login-sql.php" id="signin" class="navbar-form navbar-right" role="form">
 				  <div class="form-group">
 				    <label for="email">Email address</label>
 				    <input type="email" class="form-control" name='email' id="email" placeholder="Email">
