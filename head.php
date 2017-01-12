@@ -18,11 +18,9 @@
 
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
 
-        <meta name="robots" content="noindex" />
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 
-        <link rel="icon" href="img/favicon.png" type="image/png" sizes="16x16">
-
-
+        <link rel="icon" href="../images/favicon.png" type="image/png" sizes="16x16">
 
     </head>
     </html>

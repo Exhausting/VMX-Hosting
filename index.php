@@ -6,15 +6,11 @@ session_start();
 <html>
 <head>
   <title>VMX Hosting</title>
-  <?php include('head.php') ?>
+<?php include('head.php') ?>
 </head>
 <body>
-
-<!-- Start of Menu
 <?php include('nav-bar.php') ?>
-End of Menu -->
 
-<!-- Parallax VMX Site -->
 
 <div class="container-float">
   <div class="row">
@@ -106,6 +102,7 @@ End of Menu -->
 <!-- Start of Footer -->
 <?php include("footer.php") ?>
 <!-- End of Footer -->
+
 
 
 </body>
