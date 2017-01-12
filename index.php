@@ -6,9 +6,9 @@ session_start();
 <html>
 <head>
   <title>VMX Hosting</title>
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="css/vmx.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet"/>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="css/vmx.css"/>
   <script src="https://use.fontawesome.com/f288586ec5.js"></script>
 </head>
 <body>
@@ -46,7 +46,7 @@ session_start();
 
 <!-- Parallax VMX Site -->
 
-<div class="container bgim-1">
+<div class="container-float">
   <div class="row">
     <div class="col-lg-3"></div>
     <div class="col-lg-6">
@@ -61,6 +61,41 @@ session_start();
     </div>
   </div>
 </div>
+
+<div class= "row">
+<hr class="primary" id="product">
+<h2>Products<h2>
+            </div>
+
+    <div class="container">
+<div class="row">
+    <section class="col-lg-4">
+    <img src="images/icon.png" class="img-circle img-responsive center-block">
+     <h1>Low</h1>
+<p class="text-info"></p>
+<a class="btn btn-info pull-right" href="signup.php" role="button">Go</a>
+    </section>
+
+
+
+  <section class="col-lg-4">
+    <img src="images/icon.png" class="img-circle img-responsive center-block">
+     <h1>Medium</h1>
+<p class="text-info"></p>
+<a class="btn btn-info pull-right" href="signup.php" role="button">Go</a>
+
+    </section>
+
+  <section class="col-lg-4">
+    <img src="images/icon.png" class="img-circle img-responsive center-block">
+ <h1>High</h1>
+<p class="text-info"></p>
+<a class="btn btn-info pull-right" href="signup.php" role="button">Go</a>
+</div>
+    </div>
+
+
+
 
 <div class="spacer">
   <div class="content1">

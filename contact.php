@@ -12,7 +12,6 @@ session_start();
   <script src="https://use.fontawesome.com/f288586ec5.js"></script>
 </head>
 <body>
-	//NAV
 	<?php include('nav-bar.php') ?>
 
 <!--
@@ -42,7 +41,7 @@ session_start();
     </div> .navbar-collapse
   </div> /.container-fluid
 </nav>
-<!-- End of Menu -->
+ End of Menu -->
 
 <div class="container bgim-1">
   <div class="row">
@@ -70,7 +69,7 @@ session_start();
 </div>
 
 
-//ADD CONTACT.
+
 <div class="container">
             <h1>Contact</h1>
 <form action="smtp.php" class="well form-horizontal" method="POST">

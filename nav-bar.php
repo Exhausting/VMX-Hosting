@@ -4,13 +4,13 @@
 if (isset($_SESSION["login"]) && $_SESSION["login"] == true){
 
 echo'
-  <nav class="navbar navbar-inverse">
+  <nav class="navbar navbar-default navbar-fixed-top">
 
             <div class="container-fluid">
 
                 <div class="navbar-header">
 
-                    <a class="navbar-brand" href="index.php">SMX</a>
+                    <a class="navbar-brand" href="index.php">VMX</a>
 
                 </div>
 
@@ -33,7 +33,7 @@ echo'
 else{
 
 echo'
- <nav class="navbar navbar-inverse">
+ <nav class="navbar navbar-fixed-top">
 
             <div class="container-fluid">
 

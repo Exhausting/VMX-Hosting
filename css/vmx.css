@@ -1,8 +1,8 @@
 body {
-	background-image: : url(images/Server-room-interior-2.jpg);
+	background-image: url("../images/server-room-interior-2.jpg");
 	background-size: cover;
 	background-position: center;
-	background-attachment: fixed;
+	background-attachment: fixed;;
 	font-family: lato;
 	color: white;
 }
@@ -10,6 +10,7 @@ body {
 html {
 	height: 100%;
 }
+
 
 #homeHeader {
 	background: rgba(40, 46, 52, 0.8);
@@ -83,11 +84,12 @@ html {
 
 h1 {
 	font-weight: 700;
-	font-size: 5em;
+	font-size: 3em;
 }
 
 hr {
 	width: 400px;
+	height: 75px;
 	border-top: 1px solid #f8f8f8;
 	border-bottom: 1px solid rgba(0,0,0,0.2)
 }
