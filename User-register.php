@@ -28,7 +28,8 @@ $stmt->bind_param("sssss", $naam, $achternaam, $email, $bedrijf, $hash);
 
 // SQL Query uitvoeren.
 $result = $stmt->execute();
-
+echo "Error:\n";
+    print_r($stmt->error_list);
        if ($result === TRUE) {
            echo "New record created successfully";
     header( "refresh:2;url=index.php" );
