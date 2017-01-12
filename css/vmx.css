@@ -1,8 +1,8 @@
 body {
-	background: url(images/server-room-interior.jpg);
+	background: url(images/Server-room-interior.jpg);
 	background-size: cover;
 	background-position: center;
-	background-attachment: fixed; 
+	background-attachment: fixed;
 	font-family: lato;
 	color: white;
 }

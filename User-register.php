@@ -24,10 +24,7 @@ $stmt = $conn->prepare("insert into Customer (Naam, Achternaam, Email, Wachtwoor
 
 // Parameter mee geven uit het form.
 $stmt->bind_param("sssss", $naam, $achternaam, $email, $bedrijf, $hash);
-if ( !$stmt ) {
-    printf('errno: %d, error: %s', $mysqli->errno, $mysqli->error);
-    die;
-}
+
 // SQL Query uitvoeren.
 $result = $stmt->execute();
 
