@@ -21,7 +21,7 @@ error_reporting(E_ALL);
 
 
 // SQL Query.
-$stmt = $conn->prepare("insert into Customer (Naam, Achternaam, Email, Wachtwoord) VALUES (?,?,?,?,?)");
+$stmt = $conn->prepare("insert into Customer (Naam, Achternaam, Email, Bedrijf, Wachtwoord) VALUES (?,?,?,?,?)");
 
 // Parameter mee geven uit het form.
 $stmt->bind_param("sssss", $naam, $achternaam, $email, $bedrijf, $hash);
