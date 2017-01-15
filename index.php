@@ -6,7 +6,7 @@ session_start();
 <html>
 <head>
   <title>VMX Hosting</title>
-<!-- <?php include('head.php') ?> -->
+  <!-- <?php include('head.php') ?> -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -20,7 +20,6 @@ session_start();
 </head>
 <body>
 <?php include('nav-bar.php') ?>
-
 
 <div class="container-float">
   <div class="row">
@@ -39,39 +38,32 @@ session_start();
 </div>
 
 <div class= "row">
-<hr class="primary">
+  <hr class="primary">
 </div>
 
-
-    <div class="container">
-<div class="row">
+<div class="container">
+  <div class="row">
     <section class="col-lg-4">
-    <img src="images/icon.png" class="img-circle img-responsive center-block">
-     <h1>Low</h1>
-<p class="text-info"></p>
-<a class="btn btn-info pull-right" href="signup.php" role="button">Go</a>
+      <img src="images/icon.png" class="img-circle img-responsive center-block">
+      <h1>Low</h1>
+      <p class="text-info"></p>
+      <a class="btn btn-info pull-right" href="signup.php" role="button">Go</a>
     </section>
 
-
-
-  <section class="col-lg-4">
-    <img src="images/icon.png" class="img-circle img-responsive center-block">
-     <h1>Medium</h1>
-<p class="text-info"></p>
-<a class="btn btn-info pull-right" href="signup.php" role="button">Go</a>
-
+    <section class="col-lg-4">
+      <img src="images/icon.png" class="img-circle img-responsive center-block">
+      <h1>Medium</h1>
+      <p class="text-info"></p>
+      <a class="btn btn-info pull-right" href="signup.php" role="button">Go</a>
     </section>
 
-  <section class="col-lg-4">
-    <img src="images/icon.png" class="img-circle img-responsive center-block">
- <h1>High</h1>
-<p class="text-info"></p>
-<a class="btn btn-info pull-right" href="signup.php" role="button">Go</a>
+    <section class="col-lg-4">
+      <img src="images/icon.png" class="img-circle img-responsive center-block">
+    <h1>High</h1>
+    <p class="text-info"></p>
+    <a class="btn btn-info pull-right" href="signup.php" role="button">Go</a>
+  </div>
 </div>
-    </div>
-
-
-
 
 <div class="spacer">
   <div class="content1">
@@ -112,8 +104,6 @@ session_start();
 <!-- Start of Footer -->
 <?php include("footer.php") ?>
 <!-- End of Footer -->
-
-
 
 </body>
 </html>
