@@ -14,8 +14,8 @@ session_start();
 
 <div class="container-float">
   <div class="row">
-    <div class="col-lg-3"></div>
-    <div class="col-lg-6">
+    <div class="col-sm-3 col-xs-2"></div>
+    <div class="col-sm-6 col-xs-8">
       <div id="homeHeader">
         <h1>VMX Hosting</h1>
         <h3>Your Partner For Reliable Hosting</h3>
@@ -34,25 +34,26 @@ session_start();
 
 <div class="container">
   <div class="row">
-    <section class="col-lg-4">
+    <section class="col-xs-4">
       <img src="images/icon.png" class="img-circle img-responsive center-block">
-      <h1>Low</h1>
+      <h2>Low</h2>
       <p class="text-info"></p>
       <a class="btn btn-info pull-right" href="signup.php" role="button">Go</a>
     </section>
 
-    <section class="col-lg-4">
+    <section class="col-xs-4">
       <img src="images/icon.png" class="img-circle img-responsive center-block">
-      <h1>Medium</h1>
+      <h2>Medium</h2>
       <p class="text-info"></p>
       <a class="btn btn-info pull-right" href="signup.php" role="button">Go</a>
     </section>
 
-    <section class="col-lg-4">
+    <section class="col-xs-4">
       <img src="images/icon.png" class="img-circle img-responsive center-block">
-    <h1>High</h1>
-    <p class="text-info"></p>
-    <a class="btn btn-info pull-right" href="signup.php" role="button">Go</a>
+      <h2>High</h2>
+      <p class="text-info"></p>
+      <a class="btn btn-info pull-right" href="signup.php" role="button">Go</a>
+    </section>
   </div>
 </div>
 
