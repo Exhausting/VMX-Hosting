@@ -1,5 +1,5 @@
 body {
-	background-color: lightgrey;
+	background-color: lightgray;
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;;
@@ -13,7 +13,7 @@ html {
 
 
 #homeHeader {
-	background: rgba(40, 46, 52, 0.8);
+	background: rgb(62,62,63);
 	text-align: center;
 	padding-top: 5%;
 	padding-bottom: 5%;
@@ -38,7 +38,7 @@ html {
 }
 
 .content1 {
-	background-color: rgba(40, 46, 52, 0.8);
+	background-color: rgb(62,62,63);
 	text-align: center;
 	padding: 50px 80px;
 	text-align: justify;
