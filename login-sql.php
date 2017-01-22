@@ -33,7 +33,7 @@ if($dbCheckPassword === TRUE){
 	// sessie starten met de naam van de gebruiker/
 	$_SESSION["login"] = true;
 	$_SESSION["naam"] = $getdbpass["Naam"];
-
+	$_SESSION["email"] = $getdbpass["email"];
 	?>
 	<!DOCTYPE html>
 	<html>
@@ -61,7 +61,7 @@ if($dbCheckPassword === TRUE){
 	</body>
 	</html>
 
-	<?php 
+	<?php
   header( "refresh:2;url=dashboard.php" );
 
 } elseif ($dbCheckPassword === FALSE) {
@@ -92,14 +92,14 @@ if($dbCheckPassword === TRUE){
 	</body>
 	</html>
 
-	<?php 
+	<?php
 	header( "refresh:2;url=index.php" );
 }
 
 // $getdbpass["Wachtwoord"];
 // $getdbpass["Email"];
 
-$stmt->close(); 
+$stmt->close();
 $conn->close();
 }
 

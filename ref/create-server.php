@@ -5,7 +5,7 @@ session_start();
 require 'startdb.php';
 
 
-$email = $_SESSION["login"];
+$email = $_SESSION["email"];
 
 $servicelevel = $_POST["service_level"];
 $cpu = $_POST["cpu"];
