@@ -34,7 +34,7 @@ if (isset($_SESSION["login"]) && $_SESSION["login"] == true){ ?>
 
   <div class="spacer">
     <div class="container " id="form">
-      <form action="create-server.php" method="post">
+      <form action="ref/create-server.php" method="post">
         <div class="col-md-5">
           <h2>Hardware Settings</h2>
           <div class="form-group">
