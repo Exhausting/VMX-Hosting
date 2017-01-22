@@ -1,10 +1,10 @@
 <?php
 session_start();
+$title = 'Contact';
 ?>
 
 <html>
 <head>
-	<title>Contact us</title>
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
   <?php include('ref/head.php') ?>
 </head>

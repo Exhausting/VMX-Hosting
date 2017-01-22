@@ -1,5 +1,5 @@
 body {
-	background-color: lightgray;
+	background-color: rgba(91,92,95,0.5);
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;;
@@ -12,7 +12,6 @@ html {
 	height: 100%;
 }
 
-
 #homeHeader {
 	background: rgb(62,62,63);
 	text-align: center;
@@ -20,6 +19,7 @@ html {
 	margin-bottom: 10%;
 	padding-top: 5%;
 	padding-bottom: 5%;
+	color: rgb(37,183,211);
 	text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
 							 0px 8px 13px	rgba(0,0,0,0.1),
 							 0px 18px 23px rgba(0,0,0,0.1);
@@ -34,6 +34,11 @@ html {
 	width: 100%;
 }
 
+#products {
+	text-align: center;
+	color: black;
+
+}
 
 #form {
 	background: rgba(40, 46, 52, 0.8);
@@ -47,6 +52,11 @@ html {
 .thumbnail > img {
 	height: 150px;
 	width: 200px;
+}
+
+.navbar-special {
+	background-color: rgb(37,183,211);
+	color: white;
 }
 
 .bgim-1 {
@@ -71,12 +81,6 @@ html {
 	text-align: justify;
 }
 
-.virtualMachines{
-	background-color: rgb(62,62,63);
-	text-align: center;
-	padding: 50px 80px;
-}
-
 .createVM {
 	color: black;
 	text-align: center;
@@ -91,7 +95,7 @@ html {
 }
 
 .footerContent {
-	background-color: rgba(40, 46, 52, 1);
+	background-color: rgb(62,62,63);
 	text-align: center;
 	padding: 50px 80px;
 	text-align: justify;
@@ -120,6 +124,14 @@ html {
   letter-spacing: 10px;
 }
 
+.pageHeader h2 {
+	text-align: center;
+}
+
+.virtualMachines{
+	padding: 50px 80px;
+}
+
 h1 {
 	font-weight: 700;
 	font-size: 3em;
@@ -131,5 +143,3 @@ hr {
 	border-top: 1px solid #f8f8f8;
 	border-bottom: 1px solid rgba(0,0,0,0.2)
 }
-
-span.tab-space {padding-left:5em;}

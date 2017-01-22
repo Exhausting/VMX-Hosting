@@ -4,7 +4,6 @@
 if (isset($_SESSION["login"]) && $_SESSION["login"] == true){ ?>
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
           <span class="sr-only">Toggle navigation</span>
@@ -15,25 +14,23 @@ if (isset($_SESSION["login"]) && $_SESSION["login"] == true){ ?>
         <a class="navbar-brand" href="index.php">VMX</a>
       </div>
 
-      <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li><a href="index.php">Home</a></li>
-          <li><a href="contact.php">Support</a></li>
+          <li class="<?php if($title =='Home'){echo 'active';}?>"><a href="index.php">Home</a></li>
+          <li class="<?php if($title =='Contact'){echo 'active';}?>"><a href="contact.php">Contact</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="create.php">Create VM</a></li>
-          <li><a href="dashboard.php">Dashboard</a></li>
+          <li class="<?php if($title =='Create'){echo 'active';}?>"><a href="create.php">Create VM</a></li>
+          <li class="<?php if($title =='Dashboard'){echo 'active';}?>"><a href="dashboard.php">Dashboard</a></li>
           <li><a href="logout.php">Logout</a></li>
         </ul>
-      </div><!-- /.navbar-collapse -->
+      </div>
     </div>
   </nav>
   <?php } 
 else{ ?>
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" aria-expanded="false">
           <span class="sr-only">Toggle navigation</span>
@@ -44,12 +41,11 @@ else{ ?>
         <a class="navbar-brand" href="index.php">VMX</a>
       </div>
 
-      <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
         <ul class="nav navbar-nav">
-          <li><a href="index.php">Home</a></li>
-          <li><a href="signup.php">Register</a></li>
-          <li><a href="contact.php">Support</a></li>
+          <li class="<?php if($title =='Home'){echo 'active';}?>"><a href="index.php">Home</a></li>
+          <li class="<?php if($title =='Register'){echo 'active';}?>"><a href="signup.php">Register</a></li>
+          <li class="<?php if($title =='Contact'){echo 'active';}?>"><a href="contact.php">Contact</a></li>
         </ul>
         <form method="post" action="login-sql.php" id="signin" class="navbar-form navbar-right" role="form">
           <div class="input-group">
@@ -62,8 +58,8 @@ else{ ?>
           </div>
           <button type="submit" name="login" class="btn btn-primary">Login</button>
         </form>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
+      </div>
+    </div>
   </nav>
   <?php }
 

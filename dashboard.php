@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+$title = 'Dashboard';
 
 if (isset($_SESSION["login"]) && $_SESSION["login"] == true){ ?>
   <html>

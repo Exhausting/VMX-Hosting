@@ -1,16 +1,11 @@
-
 <?php
 session_start();
+$title = 'Register';
 ?>
 
 <html>
 <head>
-
-  <title>VMX Hosting</title>
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="css/vmx.css">
-  <script src="https://use.fontawesome.com/f288586ec5.js"></script>
+  <?php include('ref/head.php') ?>
 </head>
 <body>
 <?php include('ref/nav-bar.php') ?>
@@ -22,7 +17,6 @@ session_start();
     <div class="col-lg-6">
       <div id="form">
         <h2>Create Account</h2>
-
         <form action="User-register.php" method="post">
           <div class="form-group">
             <label for="firstName">First Name</label>
@@ -50,7 +44,6 @@ session_start();
           </div>
           <button type="submit" name="submit" class="btn btn-default">Submit</button>
         </form>
-        <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
       </div>
     </div>
   </div>
