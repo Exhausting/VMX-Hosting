@@ -18,7 +18,7 @@ if (isset($_SESSION["login"]) && $_SESSION["login"] == true){ ?>
   <body>
   <?php include('nav-bar.php') ?>
 
-  <div class="content1">
+  <div class="virtualMachines">
     <div class="row">
       <div class="col-lg-2"></div>
       <div class="col-lg-8">

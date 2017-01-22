@@ -71,6 +71,12 @@ html {
 	text-align: justify;
 }
 
+.virtualMachines{
+	background-color: rgb(62,62,63);
+	text-align: center;
+	padding: 50px 80px;
+}
+
 .spacer {
 	padding: 10% 0;
 }
