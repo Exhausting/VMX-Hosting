@@ -2,7 +2,7 @@
 
 session_start();
 
-require '../ref/startdb.php';
+require 'startdb.php';
 
 
 $email = $_SESSION["login"];
@@ -28,10 +28,10 @@ $result = $stmt->execute();
 
     <head>
       <title>Virtual machine created successfull!</title>
-      <?php include('../ref/head.php') ?>
+      <?php include('ref/head.php') ?>
     </head>
     <body>
-    <?php include('../ref/nav-bar.php') ?>
+    <?php include('ref/nav-bar.php') ?>
 
     <div class="container-float">
       <div class="row">
@@ -45,7 +45,7 @@ $result = $stmt->execute();
       </div>
     </div>
 
-    <?php include("../ref/footer.php") ?>
+    <?php include("ref/footer.php") ?>
     </body>
     </html>
 
