@@ -39,7 +39,7 @@ if($dbCheckPassword === TRUE){
 	<html>
 
 	<head>
-	  <title>Redirecting</title>
+	  <title>Login Successfull</title>
 	  <?php include('head.php') ?>
 	</head>
 	<body>
@@ -70,7 +70,7 @@ if($dbCheckPassword === TRUE){
 	<html>
 
 	<head>
-	  <title>Redirecting</title>
+	  <title>Login FAILED</title>
 	  <?php include('head.php') ?>
 	</head>
 	<body>

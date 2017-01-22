@@ -1,8 +1,7 @@
 <?php
 
 //kijk als de sessie is gestart & kijk als de login sessie true is. info komt uit login.php
-if (isset($_SESSION["login"]) && $_SESSION["login"] == true){
-  echo'
+if (isset($_SESSION["login"]) && $_SESSION["login"] == true){ ?>
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
@@ -29,10 +28,9 @@ if (isset($_SESSION["login"]) && $_SESSION["login"] == true){
       </div><!-- /.navbar-collapse -->
     </div>
   </nav>
-';} 
-else{
-  echo'
-  <nav class="navbar navbar-default">
+  <?php } 
+else{ ?>
+  <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
@@ -66,6 +64,6 @@ else{
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
-';}
+  <?php }
 
 ?>

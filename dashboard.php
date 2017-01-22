@@ -12,7 +12,7 @@ if (isset($_SESSION["login"]) && $_SESSION["login"] == true){ ?>
 
   <html>
   <head>
-    <title>Contact us</title>
+    <title>Dashboard</title>
     <?php include('head.php') ?>
   </head>
   <body>
@@ -24,18 +24,37 @@ if (isset($_SESSION["login"]) && $_SESSION["login"] == true){ ?>
       <div class="col-lg-8">
         <h2>Your Virtual Machines</h2>
         <div class="row">
-          <div class="col-md-3">
-            <h3>VM 1</h3>
-
+          <div class="col-md-3 col-sm-3">
+            <h3>Debian test</h3>
+            <a href="#" class="">
+              <div class="thumbnail imgresponsive">
+                <img src="images/debian.png">
+              </div>
+            </a>  
           </div>
-          <div class="col-md-3">
-            <h3>VM 2</h3>
+          <div class="col-md-3 col-sm-3">
+            <h3>Ubuntu Webserver</h3>
+            <a href="#" class="">
+              <div class="thumbnail">
+                <img src="images/ubuntu.png">
+              </div>
+            </a>
           </div>
-          <div class="col-md-3">
-            <h3>VM 3</h3>
+          <div class="col-md-3 col-sm-3">
+            <h3>Windows 2016 - test</h3>
+            <a href="#" class="">
+              <div class="thumbnail">
+                <img src="images/windows.jpg">
+              </div>
+            </a>
           </div>
-          <div class="col-md-3">
-            <h3>VM 4</h3>
+          <div class="col-md-3 col-sm-3">
+            <h3>Ubuntu DB</h3>
+            <a href="#" class="">
+              <div class="thumbnail">
+                <img src="images/ubuntu.png">
+              </div>
+            </a>
           </div>
         </div>
       </div>
