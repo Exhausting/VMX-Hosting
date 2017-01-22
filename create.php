@@ -6,7 +6,7 @@ $title = 'Create';
 if (isset($_SESSION["login"]) && $_SESSION["login"] == true){ ?>
   <html>
   <head>
-    <?php include('ref/head.php') ?>
+    <?php include('../ref/head.php') ?>
   </head>
   <body>
   <?php include('ref/nav-bar.php') ?>

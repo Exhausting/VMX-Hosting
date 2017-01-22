@@ -2,7 +2,7 @@
 
 session_start();
 
-require 'ref/startdb.php';
+require '../ref/startdb.php';
 
 
 $email = $_SESSION["login"];
@@ -22,9 +22,35 @@ $stmt->bind_param("ssssssss", $email, $servicelevel, $cpu, $memory, $diskspace, 
 $result = $stmt->execute();
 
   if ($result === TRUE) {
+    ?>
+    <!DOCTYPE html>
+    <html>
 
-  header( "refresh:2;url=dashboard.php" );
+    <head>
+      <title>Virtual machine created successfull!</title>
+      <?php include('../ref/head.php') ?>
+    </head>
+    <body>
+    <?php include('../ref/nav-bar.php') ?>
 
+    <div class="container-float">
+      <div class="row">
+        <div class="col-sm-3 col-xs-2"></div>
+        <div class="col-sm-6 col-xs-8">
+          <div id="homeHeader">
+            <h1>VM Successfull</h1>
+            <h3>Redirecting you shortly...</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <?php include("../ref/footer.php") ?>
+    </body>
+    </html>
+
+    <?php
+    header( "refresh:2;url=dashboard.php" );
   }
 
 
