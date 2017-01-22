@@ -33,8 +33,7 @@ if($dbCheckPassword === TRUE){
 	// sessie starten met de naam van de gebruiker/
 	$_SESSION["login"] = true;
 	$_SESSION["naam"] = $getdbpass["Naam"];
-	$_SESSION["email"] = $getdbpass["email"];
-	?>
+		?>
 	<!DOCTYPE html>
 	<html>
 
