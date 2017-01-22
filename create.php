@@ -47,7 +47,7 @@ if (isset($_SESSION["login"]) && $_SESSION["login"] == true){ ?>
             </select>
           </div>
           <div class="form-group">
-            <label for="cpu">Number of cores:</label> 
+            <label for="cpu">Number of cores:</label>
             <select class="form-control" id="cpu" name="cpu" required>
               <option disabled selected value> -- select an option -- </option>
               <option>1</option>
@@ -76,17 +76,17 @@ if (isset($_SESSION["login"]) && $_SESSION["login"] == true){ ?>
               <option>750 GB</option>
               <option>1000 GB</option>
             </select>
-          </div>          
+          </div>
         </div>
         <div class="col-md-7">
           <h2>OS Settings</h2>
           <div class="form-group">
             <label for="vm-name">Virtual Machine Name: </label>
-            <input type="text" class="form-control" id="vm-name" name="vm-name" placeholder="Virtual Machine Name" required>
+            <input type="text" class="form-control" id="vm_name" name="vm_name" placeholder="Virtual Machine Name" required>
           </div>
           <div class="form-group">
             <label for="operating-system">Operating System: </label>
-            <select class="form-control" id="operating-system" name="operating-system"  required>
+            <select class="form-control" id="operating_system" name="operating_system"  required>
               <option disabled selected value> -- select an option -- </option>
               <option>Ubuntu 16.04 LTS</option>
               <option>Debian 8</option>
@@ -95,7 +95,7 @@ if (isset($_SESSION["login"]) && $_SESSION["login"] == true){ ?>
           </div>
           <div class="form-group">
             <label for="activation-key">Windows Server 2016 Activation Key:</label>
-            <input type="text" class="form-control" id="activation-key" name="activation-key" placeholder="Optional">
+            <input type="text" class="form-control" id="activation_key" name="activation_key" placeholder="Optional">
           </div>
           <div class="checkbox">
             <label><input type="checkbox"> I accept the <a href="terms.php">Terms of Conditions</a></label>
@@ -110,7 +110,7 @@ if (isset($_SESSION["login"]) && $_SESSION["login"] == true){ ?>
   </body>
   </html>
 
-<?php } else { 
-  include("ref/nologin.php"); 
+<?php } else {
+  include("ref/nologin.php");
 }
 ?>
