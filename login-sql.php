@@ -30,16 +30,70 @@ $dbCheckPassword = password_verify($password, $getdbpass["Wachtwoord"]);
 
 if($dbCheckPassword === TRUE){
 
-// sessie starten met de naam van de gebruiker/
-$_SESSION["login"] = true;
-$_SESSION["naam"] = $getdbpass["Naam"];
-echo "Login successfully!";
-    header( "refresh:2;url=dashboard.php" );
+	// sessie starten met de naam van de gebruiker/
+	$_SESSION["login"] = true;
+	$_SESSION["naam"] = $getdbpass["Naam"];
 
-}elseif($dbCheckPassword === FALSE){
+	?>
+	<!DOCTYPE html>
+	<html>
 
-echo "Wrong password or Email-address";
-header( "refresh:2;url=index.php" );
+	<head>
+	  <title>Redirecting</title>
+	  <?php include('head.php') ?>
+	</head>
+	<body>
+	<?php include('nav-bar.php') ?>
+
+	<div class="container-float">
+	  <div class="row">
+	    <div class="col-sm-3 col-xs-2"></div>
+	    <div class="col-sm-6 col-xs-8">
+	      <div id="homeHeader">
+	        <h1>Login Successfull</h1>
+	        <h3>Redirecting you shortly...</h3>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<?php include("footer.php") ?>
+	</body>
+	</html>
+
+	<?php 
+  header( "refresh:2;url=dashboard.php" );
+
+} elseif ($dbCheckPassword === FALSE) {
+	?>
+	<!DOCTYPE html>
+	<html>
+
+	<head>
+	  <title>Redirecting</title>
+	  <?php include('head.php') ?>
+	</head>
+	<body>
+	<?php include('nav-bar.php') ?>
+
+	<div class="container-float">
+	  <div class="row">
+	    <div class="col-sm-3 col-xs-2"></div>
+	    <div class="col-sm-6 col-xs-8">
+	      <div id="homeHeader">
+	        <h1>Login Failed</h1>
+	        <h3>You entered a wrong username/password, please try again...</h3>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<?php include("footer.php") ?>
+	</body>
+	</html>
+
+	<?php 
+	header( "refresh:2;url=index.php" );
 }
 
 // $getdbpass["Wachtwoord"];
