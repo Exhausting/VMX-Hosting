@@ -6,11 +6,11 @@ session_start();
 <head>
 	<title>Contact us</title>
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
-  <?php include('head.php') ?>
+  <?php include('ref/head.php') ?>
 </head>
 <body>
 
-<?php include('nav-bar.php') ?>
+<?php include('ref/nav-bar.php') ?>
 
 <!-- Start Google Maps Widget -->
 <div id="mapHeader">
@@ -103,7 +103,7 @@ session_start();
 </div>
 <!-- End Contact Form -->
 
-<?php include("footer.php") ?>
+<?php include("ref/footer.php") ?>
 
 <script async defer 
 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDt67W5eE2BoAi-c1_Qe-5AcBTJbpA0lT8&callback=initMap">

@@ -4,7 +4,7 @@ session_start();
 if (isset($_POST['login'])){
 
 // Start datbase verbinding.
-require 'startdb.php';
+require 'ref/startdb.php';
 
 // Static data uit het form.
 $email =    $_POST['email'];
@@ -40,10 +40,10 @@ if($dbCheckPassword === TRUE){
 
 	<head>
 	  <title>Login Successfull</title>
-	  <?php include('head.php') ?>
+	  <?php include('ref/head.php') ?>
 	</head>
 	<body>
-	<?php include('nav-bar.php') ?>
+	<?php include('ref/nav-bar.php') ?>
 
 	<div class="container-float">
 	  <div class="row">
@@ -57,7 +57,7 @@ if($dbCheckPassword === TRUE){
 	  </div>
 	</div>
 
-	<?php include("footer.php") ?>
+	<?php include("ref/footer.php") ?>
 	</body>
 	</html>
 
@@ -71,10 +71,10 @@ if($dbCheckPassword === TRUE){
 
 	<head>
 	  <title>Login FAILED</title>
-	  <?php include('head.php') ?>
+	  <?php include('ref/head.php') ?>
 	</head>
 	<body>
-	<?php include('nav-bar.php') ?>
+	<?php include('ref/nav-bar.php') ?>
 
 	<div class="container-float">
 	  <div class="row">
@@ -88,7 +88,7 @@ if($dbCheckPassword === TRUE){
 	  </div>
 	</div>
 
-	<?php include("footer.php") ?>
+	<?php include("ref/footer.php") ?>
 	</body>
 	</html>
 

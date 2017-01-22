@@ -22,6 +22,7 @@ if (isset($_SESSION["login"]) && $_SESSION["login"] == true){ ?>
           <li><a href="contact.php">Support</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
+          <li><a href="create.php">Create VM</a></li>
           <li><a href="dashboard.php">Dashboard</a></li>
           <li><a href="logout.php">Logout</a></li>
         </ul>

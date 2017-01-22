@@ -77,6 +77,11 @@ html {
 	padding: 50px 80px;
 }
 
+.createVM {
+	color: black;
+	text-align: center;
+}
+
 .spacer {
 	padding: 10% 0;
 }
@@ -127,3 +132,4 @@ hr {
 	border-bottom: 1px solid rgba(0,0,0,0.2)
 }
 
+span.tab-space {padding-left:5em;}

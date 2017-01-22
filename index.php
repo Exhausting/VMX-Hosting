@@ -6,11 +6,11 @@ session_start();
 <html>
 <head>
   <title>VMX Hosting</title>
-  <?php include('head.php') ?>
+  <?php include('ref/head.php') ?>
 </head>
 
 <body>
-<?php include('nav-bar.php') ?>
+<?php include('ref/nav-bar.php') ?>
 
 <div class="container-float">
   <div class="row">
@@ -32,31 +32,6 @@ session_start();
   <hr class="primary">
 </div>
 
-<div class="container">
-  <div class="row">
-    <section class="col-xs-4">
-      <img src="images/icon.png" class="img-circle img-responsive center-block">
-      <h2>Low</h2>
-      <p class="text-info"></p>
-      <a class="btn btn-info pull-right" href="signup.php" role="button">Go</a>
-    </section>
-
-    <section class="col-xs-4">
-      <img src="images/icon.png" class="img-circle img-responsive center-block">
-      <h2>Medium</h2>
-      <p class="text-info"></p>
-      <a class="btn btn-info pull-right" href="signup.php" role="button">Go</a>
-    </section>
-
-    <section class="col-xs-4">
-      <img src="images/icon.png" class="img-circle img-responsive center-block">
-      <h2>High</h2>
-      <p class="text-info"></p>
-      <a class="btn btn-info pull-right" href="signup.php" role="button">Go</a>
-    </section>
-  </div>
-</div>
-
 <div class="spacer">
   <div class="content1">
     <div class="row">
@@ -74,6 +49,81 @@ session_start();
     </div>
   </div>
 </div>
+
+<?php if (isset($_SESSION["login"]) && $_SESSION["login"] == true){ ?>
+<div class="spacer createVM">
+  <div class="container">
+    <div class="row">
+      <section class="col-xs-4">
+        <img src="images/icon.png" class="img-circle img-responsive center-block">
+        <h2>Low</h2>
+        <p class="text-info">
+          <p><b>CPU:    </b> 1</p>
+          <p><b>Memory: </b> 1GB</p>
+          <p><b>Storage:</b> 100GB</p></p>
+        <a class="btn btn-info pull-center" href="create.php" role="button">Create</a>
+      </section>
+
+      <section class="col-xs-4">
+        <img src="images/icon.png" class="img-circle img-responsive center-block">
+        <h2>Medium</h2>
+        <p class="text-info">
+          <p><b>CPU:    </b> 2</p>
+          <p><b>Memory: </b> 4GB</p>
+          <p><b>Storage:</b> 500GB</p></p>
+        <a class="btn btn-info pull-center" href="create.php" role="button">Create</a>
+      </section>
+
+      <section class="col-xs-4">
+        <img src="images/icon.png" class="img-circle img-responsive center-block">
+        <h2>High</h2>
+        <p class="text-info">
+          <p><b>CPU:    </b> 4</p>
+          <p><b>Memory: </b> 8GB</p>
+          <p><b>Storage:</b> 1000GB</p></p>
+        <a class="btn btn-info pull-center" href="create.php" role="button">Create</a>
+      </section>
+    </div>
+  </div>
+</div>
+<?php } 
+else{ ?>
+<div class="spacer createVM">
+  <div class="container">
+    <div class="row">
+      <section class="col-xs-4">
+        <img src="images/icon.png" class="img-circle img-responsive center-block">
+        <h2>Low</h2>
+        <p class="text-info">
+            <p><b>CPU:    </b> 1</p>
+            <p><b>Memory: </b> 1GB</p>
+            <p><b>Storage:</b> 100GB</p></p>
+        <a class="btn btn-info pull-right" href="signup.php" role="button">Go</a>
+      </section>
+
+      <section class="col-xs-4">
+        <img src="images/icon.png" class="img-circle img-responsive center-block">
+        <h2>Medium</h2>
+        <p class="text-info">
+            <p><b>CPU:    </b> 2</p>
+            <p><b>Memory: </b> 4GB</p>
+            <p><b>Storage:</b> 500GB</p></p>
+        <a class="btn btn-info pull-right" href="signup.php" role="button">Go</a>
+      </section>
+
+      <section class="col-xs-4">
+        <img src="images/icon.png" class="img-circle img-responsive center-block">
+        <h2>High</h2>
+        <p class="text-info">
+            <p><b>CPU:    </b> 4</p>
+            <p><b>Memory: </b> 8GB</p>
+            <p><b>Storage:</b> 1000GB</p></p>
+        <a class="btn btn-info pull-right" href="signup.php" role="button">Go</a>
+      </section>
+    </div>
+  </div>
+</div>
+<?php } ?>
 
 <div class="spacer">
   <div class="content1">
@@ -93,9 +143,7 @@ session_start();
   </div>
 </div>
 
-<!-- Start of Footer -->
-<?php include("footer.php") ?>
-<!-- End of Footer -->
+<?php include("ref/footer.php") ?>
 
 </body>
 </html>
