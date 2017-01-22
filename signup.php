@@ -17,7 +17,7 @@ $title = 'Register';
     <div class="col-lg-6">
       <div id="form">
         <h2>Create Account</h2>
-        <form action="User-register.php" method="post">
+        <form action="ref/user-register.php" method="post">
           <div class="form-group">
             <label for="firstName">First Name</label>
             <input type="text" class="form-control" id="firtName" name="form_naam" placeholder="First Name" required>
@@ -39,8 +39,8 @@ $title = 'Register';
             <label for="password">Password</label>
             <input type="password" class="form-control" id="pasword" name="form_wachtwoord" placeholder="Password" pattern=".{8,255}" title="Passwords must be a minimum of 8 characters long, and include at least 1 uppercase letter, 1 lowercase letter, and 1 number. Please note: do not include your username, or part of your username, in your password." required>
           </div>
-              <div class="checkbox">
-            <label><input type="checkbox"> I accept the <a href="#">Terms of Conditions</a></label>
+          <div class="checkbox">
+            <label><input type="checkbox"> I accept the <a href="terms.php">Terms of Conditions</a></label>
           </div>
           <button type="submit" name="submit" class="btn btn-default">Submit</button>
         </form>

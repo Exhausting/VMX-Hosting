@@ -12,35 +12,45 @@ $title = 'Home';
 <body>
 <?php include('ref/nav-bar.php') ?>
 
-<div class="container-float">
-  <div class="row">
-    <div class="col-sm-3 col-xs-2"></div>
-    <div class="col-sm-6 col-xs-8">
-      <div id="homeHeader">
-        <h1>VMX Hosting</h1>
-        <h3>Your Partner For Reliable Hosting</h3>
-        <hr>
-        <form>
-          <button type="submit" class="btn-default btn-lg btn-special" formaction="signup.php"><i class="fa fa-user-plus" aria-hidden="true"></i> Get Started!</button>
-        </form>
+<div class="background">
+  <div class="container-float">
+    <div class="row">
+      <div class="col-sm-3 col-xs-2"></div>
+      <div class="col-sm-6 col-xs-8">
+        <div id="homeHeader">
+          <h1>VMX Hosting</h1>
+          <h3>Your Partner For Reliable Hosting</h3>
+          <hr>
+          <?php if (isset($_SESSION["login"]) && $_SESSION["login"] == true){ ?>
+            <form>
+              <button type="submit" class="btn-default btn-lg btn-special" formaction="create.php"><i class="fa fa-user-plus" aria-hidden="true"></i> Get Started!</button>
+            </form>
+          <?php } else{ ?>
+            <form>
+              <button type="submit" class="btn-default btn-lg btn-special" formaction="signup.php"><i class="fa fa-user-plus" aria-hidden="true"></i> Get Started!</button>
+            </form>
+          <?php } ?>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
 <div class="spacer">
-  <div class="content1">
-    <div class="row">
-      <div class="col-lg-2"></div>
-      <div class="col-lg-8">
-        <h2>Pellentesque habitant</h2>
-        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+  <div class="background">
+    <div class="content1">
+      <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
+          <h2>Pellentesque habitant</h2>
+          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
 
-        <h2>Vestibulum tortor</h2>
-        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+          <h2>Vestibulum tortor</h2>
+          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
 
-        <h2>Mauris placerat</h2>
-        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+          <h2>Mauris placerat</h2>
+          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -118,18 +128,20 @@ $title = 'Home';
 </div>
 
 <div class="spacer">
-  <div class="content1">
-    <div class="row">
-      <div class="col-lg-2"></div>
-      <div class="col-lg-8">
-        <h2>Pellentesque habitant</h2>
-        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+  <div class="background">
+    <div class="content1">
+      <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
+          <h2>Pellentesque habitant</h2>
+          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
 
-        <h2>Vestibulum tortor</h2>
-        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+          <h2>Vestibulum tortor</h2>
+          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
 
-        <h2>Mauris placerat</h2>
-        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+          <h2>Mauris placerat</h2>
+          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+        </div>
       </div>
     </div>
   </div>
