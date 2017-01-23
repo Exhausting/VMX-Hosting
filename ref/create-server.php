@@ -22,7 +22,13 @@ $operatingsystem = $_POST["operating_system"];
 $activationkey = $_POST["activation_key"];
 
 // Test of data goed doorkomt.
+<<<<<<< Updated upstream
 // echo "Email: $email, SLA: $servicelevel, CPU: $cpu, Memory: $memory, Diskspace: $diskspace, VM-Name: $vmname, OS:  $operatingsystem, Key: $activationkey";
+=======
+echo $_SESSION["email"];
+
+ echo "Email: $email, SLA: $servicelevel, CPU: $cpu, Memory: $memory, Diskspace: $diskspace, VM-Name: $vmname, OS:  $operatingsystem, Key: $activationkey";
+>>>>>>> Stashed changes
 
 $stmt = $conn->prepare("INSERT INTO Customer_server (Email, Servicelevel, Cpu, Memory, Diskspace, Vmnaam, Operatingsystem, Activationkey) VALUES (?,?,?,?,?,?,?,?,?)");
 
