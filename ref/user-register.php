@@ -17,76 +17,20 @@ if(isset($_POST['submit'])){
   $hash = password_hash($password, PASSWORD_DEFAULT);
 
   // SQL Query.
-  $stmt = $conn->prepare("INSERT INTO Customer (Naam, Achternaam, Email, Bedrijf, Wachtwoord) VALUES (?,?,?,?,?)");
+  $stmt = $conn->prepare("insert into Customer (Naam, Achternaam, Email, Bedrijf, Wachtwoord) VALUES (?,?,?,?,?)");
 
   // Parameter mee geven uit het form.
   $stmt->bind_param("sssss", $naam, $achternaam, $email, $bedrijf, $hash);
 
   // SQL Query uitvoeren.
   $result = $stmt->execute();
-  if ($result === TRUE) {
-    $_SESSION["login"] = true;
-    $_SESSION["email"] = $email;
-    ?>
-    <!DOCTYPE html>
-    <html>
-
-    <head>
-      <title>Registration Successfull</title>
-      <?php include('head.php') ?>
-    </head>
-    <body>
-    <?php include('nav-bar.php') ?>
-
-    <div class="background">
-      <div class="container-float">
-        <div class="row">
-          <div class="col-sm-3 col-xs-2"></div>
-          <div class="col-sm-6 col-xs-8">
-            <div id="homeHeader">
-              <h1>Registration Successfull</h1>
-              <h3>Redirecting you shortly...</h3>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    </body>
-    </html>
-
-    <?php
-    header( "refresh:2;url=../index.php" );
+    if ($result === TRUE) {
+      echo "New record created successfully";
+      $_SESSION["login"] = true;
+      $_SESSION["naam"] = $getdbpass["Naam"];
+      header( "refresh:2;url=/index.php" );
   }else {
-    ?>
-    <!DOCTYPE html>
-    <html>
-
-    <head>
-      <title>Oops!</title>
-      <?php include('head.php') ?>
-    </head>
-    <body>
-    <?php include('nav-bar.php') ?>
-
-    <div class="background">
-      <div class="container-float">
-        <div class="row">
-          <div class="col-sm-3 col-xs-2"></div>
-          <div class="col-sm-6 col-xs-8">
-            <div id="homeHeader">
-              <h1>Oops! Something went wrong!</h1>
-              <h3>Your registration failed, please try again...</h3>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    </body>
-    </html>
-    <?php
-    header( "refresh:2;url=../signup.php" );
+    echo "Failed to write data to the database. Please try again.";
   }
 
   $stmt->close();

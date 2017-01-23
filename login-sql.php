@@ -57,6 +57,7 @@ if($dbCheckPassword === TRUE){
 	  </div>
 	</div>
 
+	<?php include("ref/footer.php") ?>
 	</body>
 	</html>
 
@@ -87,6 +88,7 @@ if($dbCheckPassword === TRUE){
 	  </div>
 	</div>
 
+	<?php include("ref/footer.php") ?>
 	</body>
 	</html>
 
