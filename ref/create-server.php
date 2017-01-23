@@ -30,9 +30,9 @@ $activationkey = $_POST["activation_key"];
  echo "Email: $email, SLA: $servicelevel, CPU: $cpu, Memory: $memory, Diskspace: $diskspace, VM-Name: $vmname, OS:  $operatingsystem, Key: $activationkey";
 //>>>>>>> Stashed changes
 
-$stmt = $conn->prepare("INSERT INTO Customer_server (Email, Servicelevel, Cpu, Memory, Diskspace, Vmnaam, Operatingsystem, Activationkey) VALUES (?,?,?,?,?,?,?,?,?)");
+$stmt = $conn->prepare("INSERT INTO Customer_server (Email, Servicelevel, Cpu, Memory, Diskspace, Vmnaam, Operatingsystem, Activationkey) VALUES (?,?,?,?,?,?,?,?)");
 
-$stmt->bind_param('ssssssss', $email, $servicelevel, $cpu, $memory, $diskspace, $vmname, $operatingsystem, $activationkey);
+$stmt->bind_param("ssssssss", $email, $servicelevel, $cpu, $memory, $diskspace, $vmname, $operatingsystem, $activationkey);
 
 
 $result = $stmt->execute();
