@@ -19,7 +19,9 @@ if (isset($_SESSION["login"]) && $_SESSION["login"] == true){ ?>
     <div class="row">
       <div class="col-lg-2 col-md-2"></div>
       <div class="col-lg-8 col-md-8">
-        <h2>Your Virtual Machines</h2>
+        <div class="pageHeader">
+          <h2>Your Virtual Machines</h2>
+        </div>
         <div class="row"> 
         <?php
           if (mysqli_num_rows($query) > 0) {
