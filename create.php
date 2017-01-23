@@ -15,7 +15,9 @@ if (isset($_SESSION["login"]) && $_SESSION["login"] == true){ ?>
   </head>
   <body>
   <?php include('ref/nav-bar.php') ?>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="script.js"></script>
+
   <div class="background">
     <div class="content1">
       <div class="pageHeader">
