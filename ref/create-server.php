@@ -32,6 +32,13 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
     )
 );
 $result = curl_exec($ch);
+$errors = curl_error($ch);
+$response = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+echo "<br>resultaat:  ". $result;
+echo "<br>Errors:  ". $errors;
+echo "<br>Http error code:  ".$response;
+echo "<br>URL: ".$url;
+//We should remove this 
 
 $stmt = $conn->prepare("INSERT INTO Customer_server (Email, Servicelevel, Cpu, Memory, Diskspace, Vmnaam, Operatingsystem, Activationkey) VALUES (?,?,?,?,?,?,?,?)");
 
