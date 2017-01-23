@@ -1,6 +1,6 @@
 <?php
 session_start();
-require"ref/startdb.php";
+require"startdb.php";
 
 if(isset($_POST['submit'])){
   $naam = $_POST['form_naam'];
@@ -28,7 +28,7 @@ if(isset($_POST['submit'])){
       echo "New record created successfully";
       $_SESSION["login"] = true;
       $_SESSION["naam"] = $getdbpass["Naam"];
-      header( "refresh:2;url=index.php" );
+      header( "refresh:2;url=/index.php" );
   }else {
     echo "Failed to write data to the database. Please try again.";
   }

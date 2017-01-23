@@ -41,9 +41,9 @@ if (isset($_SESSION["login"]) && $_SESSION["login"] == true){ ?>
             <label for="serviceLevel">Select Service Level:</label>
             <select class="form-control" id="serviceLevel" name="service_level" required>
               <option disabled selected value> -- select an option -- </option>
-              <option>Low</option>
-              <option>Medium</option>
-              <option>High</option>
+              <option value="1">Low</option>
+              <option value="2">Medium</option>
+              <option value="3">High</option>
             </select>
           </div>
           <div class="form-group">
@@ -59,22 +59,22 @@ if (isset($_SESSION["login"]) && $_SESSION["login"] == true){ ?>
             <label for="memory">Ammount of Memory:</label>
             <select class="form-control" id="memory" name="memory" required>
               <option disabled selected value> -- select an option -- </option>
-              <option>1 GB</option>
-              <option>2 GB</option>
-              <option>4 GB</option>
-              <option>8 GB</option>
-              <option>16 GB</option>
+              <option value="1">1 GB</option>
+              <option value="2">2 GB</option>
+              <option value="4">4 GB</option>
+              <option value="8">8 GB</option>
+              <option value="16">16 GB</option>
             </select>
           </div>
           <div class="form-group">
             <label for="disk_space">Ammount of Disk Space:</label>
             <select class="form-control" id="disk_space" name="disk_space" required>
               <option disabled selected value> -- select an option -- </option>
-              <option>100 GB</option>
-              <option>250 GB</option>
-              <option>500 GB</option>
-              <option>750 GB</option>
-              <option>1000 GB</option>
+              <option value="100">100 GB</option>
+              <option value="250">250 GB</option>
+              <option value="500">500 GB</option>
+              <option value="750">750 GB</option>
+              <option value="1000">1000 GB</option>
             </select>
           </div>
         </div>
@@ -88,9 +88,9 @@ if (isset($_SESSION["login"]) && $_SESSION["login"] == true){ ?>
             <label for="operating-system">Operating System: </label>
             <select class="form-control" id="operating_system" name="operating_system"  required>
               <option disabled selected value> -- select an option -- </option>
-              <option>Ubuntu 16.04 LTS</option>
-              <option>Debian 8</option>
-              <option>Windows Server 2016</option>
+              <option value="1">Ubuntu 16.04 LTS</option>
+              <option value="2">Debian 8</option>
+              <option value="3">Windows Server 2016</option>
             </select>
           </div>
           <div class="form-group">

@@ -1,12 +1,18 @@
 <?php
 
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 session_start();
 
 require 'startdb.php';
 
+// Test if a connection can be made.
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 
 $email = $_SESSION["email"];
-
 $servicelevel = $_POST["service_level"];
 $cpu = $_POST["cpu"];
 $memory = $_POST["memory"];
@@ -15,24 +21,27 @@ $vmname = $_POST["vm_name"];
 $operatingsystem = $_POST["operating_system"];
 $activationkey = $_POST["activation_key"];
 
-$stmt = $conn->prepare("insert into Customer_server (Email, Servicelevel, Cpu, Memory, Diskspace, Vmnaam, Operatingsytem, Activationkey) VALUES (?,?,?,?,?,?,?,?)");
+// Test of data goed doorkomt.
+// echo "Email: $email, SLA: $servicelevel, CPU: $cpu, Memory: $memory, Diskspace: $diskspace, VM-Name: $vmname, OS:  $operatingsystem, Key: $activationkey";
 
-$stmt->bind_param("ssssssss", $email, $servicelevel, $cpu, $memory, $diskspace, $vmname, $operatingsystem, $activationkey);
+$stmt = $conn->prepare("INSERT INTO Customer_server (Email, Servicelevel, Cpu, Memory, Diskspace, Vmnaam, Operatingsystem, Activationkey) VALUES (?,?,?,?,?,?,?,?,?)");
+
+$stmt->bind_param('siiiisis', $email, $servicelevel, $cpu, $memory, $diskspace, $vmname, $operatingsystem, $activationkey);
+
 
 $result = $stmt->execute();
 
   if ($result === TRUE) {
-    ?>
-    <!DOCTYPE html>
+  ?>
+  <!DOCTYPE html>
     <html>
 
     <head>
       <title>Virtual machine created successfull!</title>
-      <?php include('ref/head.php') ?>
+      <?php include('head.php') ?>
     </head>
     <body>
-    <?php include('ref/nav-bar.php') ?>
-
+    <?php include('nav-bar.php') ?>
     <div class="container-float">
       <div class="row">
         <div class="col-sm-3 col-xs-2"></div>
@@ -45,20 +54,18 @@ $result = $stmt->execute();
       </div>
     </div>
 
-    <?php include("ref/footer.php") ?>
+    <?php include("footer.php") ?>
     </body>
     </html>
 
-    <?php
-    header( "refresh:2;url=dashboard.php" );
+    <?php 
+    header( "refresh:2;url=/dashboard.php" );
   }
-
-
-
 
 
 $stmt->close();
 $conn->close();
+
 
 
  ?>
