@@ -25,7 +25,7 @@ $activationkey = $_POST["activation_key"];
 <<<<<<< Updated upstream
 // echo "Email: $email, SLA: $servicelevel, CPU: $cpu, Memory: $memory, Diskspace: $diskspace, VM-Name: $vmname, OS:  $operatingsystem, Key: $activationkey";
 =======
-echo $_SESSION["email"];
+
 
  echo "Email: $email, SLA: $servicelevel, CPU: $cpu, Memory: $memory, Diskspace: $diskspace, VM-Name: $vmname, OS:  $operatingsystem, Key: $activationkey";
 >>>>>>> Stashed changes
@@ -64,7 +64,7 @@ $result = $stmt->execute();
     </body>
     </html>
 
-    <?php 
+    <?php
     header( "refresh:2;url=/dashboard.php" );
   }
 
