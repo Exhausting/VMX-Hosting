@@ -54,12 +54,11 @@ $result = $stmt->execute();
       </div>
     </div>
 
-    <?php include("footer.php") ?>
     </body>
     </html>
 
     <?php 
-    header( "refresh:2;url=/dashboard.php" );
+    header( "refresh:2;url=../dashboard.php" );
   }
 
 
