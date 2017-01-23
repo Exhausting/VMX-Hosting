@@ -11,25 +11,8 @@ require 'startdb.php';
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-$url = 'http://10.0.1.102:28080/yes/domain?vmName='.$vmname.'&memory='.$memory.'&vmImage=/home/jurjen/Downloads/CentOS-7-x86_64-Minimal-1611.iso&storage='.$diskspace;
-$ch = curl_init($url);
-curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-        'Content-Type: application/json',
-        'Accept: application/json'
-    )
-);
-echo "test2";
-$result = curl_exec($ch);
-$errors = curl_error($ch);
-$response = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-echo "<br>resultaat:  ". $result;
-echo "<br>Errors:  ". $errors;
-echo "<br>Http error code:  ".$response;
-echo "<br>URL: ".$url;
-//We should remove this 
-echo "test3";
+
+
 
 
 $email = $_SESSION["email"];
@@ -40,7 +23,23 @@ $diskspace = $_POST["disk_space"];
 $vmname = $_POST["vm_name"];
 $operatingsystem = $_POST["operating_system"];
 $activationkey = $_POST["activation_key"];
+$url = 'http://10.0.1.102:28080/yes/domain?vmName='.$vmname.'&memory='.$memory.'&vmImage=/home/jurjen/Downloads/CentOS-7-x86_64-Minimal-1611.iso&storage='.$diskspace;
+$ch = curl_init($url);
+curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+        'Content-Type: application/json',
+        'Accept: application/json'
+    )
+);
 
+$result = curl_exec($ch);
+$errors = curl_error($ch);
+$response = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+echo "<br>resultaat:  ". $result;
+echo "<br>Errors:  ". $errors;
+echo "<br>Http error code:  ".$response;
+echo "<br>URL: ".$url;
 $stmt = $conn->prepare("INSERT INTO Customer_server (Email, Servicelevel, Cpu, Memory, Diskspace, Vmnaam, Operatingsystem, Activationkey) VALUES (?,?,?,?,?,?,?,?)");
 
 $stmt->bind_param("ssssssss", $email, $servicelevel, $cpu, $memory, $diskspace, $vmname, $operatingsystem, $activationkey);
