@@ -21,7 +21,7 @@ if (isset($_SESSION["login"]) && $_SESSION["login"] == true){ ?>
         <div class="pageHeader">
           <h2>Your Virtual Machines</h2>
         </div>
-        <div class="row"> 
+        <div class="row">
         <?php
           if (mysqli_num_rows($query) > 0) {
             while ($row = mysqli_fetch_assoc($query)) {
@@ -38,12 +38,12 @@ if (isset($_SESSION["login"]) && $_SESSION["login"] == true){ ?>
                       ?> <img src="images/windows.jpg"> <?php
                     } ?>
                   </div>
-                </a>  
+                </a>
                 <div class="col1">
-                  <div><p><b>Service Level: </b></p></div>                          
+                  <div><p><b>Service Level: </b></p></div>
                   <div><p><b>CPU:           </b></p></div>
-                  <div><p><b>Memory:        </b></p></div> 
-                  <div><p><b>Storage:       </b></p></div>                      
+                  <div><p><b>Memory:        </b></p></div>
+                  <div><p><b>Storage:       </b></p></div>
                 </div>
                 <div class="col2">
                   <?php if ($row['Servicelevel'] == '1') {
@@ -54,12 +54,12 @@ if (isset($_SESSION["login"]) && $_SESSION["login"] == true){ ?>
                     ?> <div><p>High</p></div><?php
                   } ?>
                   <div><p><?php echo $row['Cpu'] ?></p></div>
-                  <div><p><?php echo $row['Memory'] ?> MB</p></div>   
+                  <div><p><?php echo $row['Memory'] ?> GB</p></div>   
                   <div><p><?php echo $row['Diskspace'] ?> GB</p></div>
                 </div>
               </div> <?php
             }
-          } 
+          }
         ?>
         </div>
       </div>
@@ -70,7 +70,7 @@ if (isset($_SESSION["login"]) && $_SESSION["login"] == true){ ?>
   </body>
   </html>
 
-<?php } else { 
+<?php } else {
   include("ref/nologin.php");
-} 
+}
 ?>
