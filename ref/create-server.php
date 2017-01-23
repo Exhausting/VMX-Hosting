@@ -11,7 +11,7 @@ require 'startdb.php';
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-$url = 'http://10.0.1.102:8080/yes/domain?vmName='.$vmname.'&memory='.$memory.'&vmImage=/home/jurjen/Downloads/CentOS-7-x86_64-Minimal-1611.iso&storage='.$diskspace;
+$url = 'http://10.0.1.102:28080/yes/domain?vmName='.$vmname.'&memory='.$memory.'&vmImage=/home/jurjen/Downloads/CentOS-7-x86_64-Minimal-1611.iso&storage='.$diskspace;
 $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
