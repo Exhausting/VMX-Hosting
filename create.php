@@ -59,11 +59,11 @@ if (isset($_SESSION["login"]) && $_SESSION["login"] == true){ ?>
             <label for="memory">Ammount of Memory:</label>
             <select class="form-control" id="memory" name="memory" required>
               <option disabled selected value> -- select an option -- </option>
-              <option value="1">1 GB</option>
-              <option value="2">2 GB</option>
-              <option value="4">4 GB</option>
-              <option value="8">8 GB</option>
-              <option value="16">16 GB</option>
+              <option value="1000">1 GB</option>
+              <option value="2000">2 GB</option>
+              <option value="4000">4 GB</option>
+              <option value="8000">8 GB</option>
+              <option value="16000">16 GB</option>
             </select>
           </div>
           <div class="form-group">
