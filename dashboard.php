@@ -26,7 +26,7 @@ if (isset($_SESSION["login"]) && $_SESSION["login"] == true){ ?>
             while ($row = mysqli_fetch_assoc($query)) {
               ?>
               <div class="col-md-3 col-sm-3 ">
-                <h3><?php echo $row['Vmnaam'] ?></h3>
+                <h3><?php echo htmlspecialchars($row['Vmnaam'], ENT_QUOTES, 'UTF-8') ?></h3>
                 <a href="#" class="">
                   <div class="thumbnail imgresponsive">
                     <?php if ($row['Operatingsystem'] == '1') {
