@@ -26,7 +26,7 @@ $activationkey = $_POST["activation_key"];
 
 $stmt = $conn->prepare("INSERT INTO Customer_server (Email, Servicelevel, Cpu, Memory, Diskspace, Vmnaam, Operatingsystem, Activationkey) VALUES (?,?,?,?,?,?,?,?)");
 
-$stmt->bind_param('siiiisis', $email, $servicelevel, $cpu, $memory, $diskspace, $vmname, $operatingsystem, $activationkey);
+$stmt->bind_param("siiiisis", $email, $servicelevel, $cpu, $memory, $diskspace, $vmname, $operatingsystem, $activationkey);
 
 
 $result = $stmt->execute();
