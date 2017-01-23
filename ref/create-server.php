@@ -20,10 +20,6 @@ $diskspace = $_POST["disk_space"];
 $vmname = $_POST["vm_name"];
 $operatingsystem = $_POST["operating_system"];
 $activationkey = $_POST["activation_key"];
-// Create the Virtual machine using the API
-if(!function_exists('curl_version')) {
-    throw new Exception('Curl package missing');
-}
 
 $stmt = $conn->prepare("INSERT INTO Customer_server (Email, Servicelevel, Cpu, Memory, Diskspace, Vmnaam, Operatingsystem, Activationkey) VALUES (?,?,?,?,?,?,?,?)");
 
