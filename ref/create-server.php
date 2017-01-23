@@ -21,6 +21,22 @@ $vmname = $_POST["vm_name"];
 $operatingsystem = $_POST["operating_system"];
 $activationkey = $_POST["activation_key"];
 
+
+
+// Create the Virtual machine using the API
+
+$url = 'http://api.vmxhosting.nl:8080/yes/domain?vmName='.$vmname.'&memory='.$memory.'&vmImage=/home/jurjen/Downloads/CentOS-7-x86_64-Minimal-1611.iso&storage='.$diskspace;
+$ch = curl_init($url);
+curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+        'Content-Type: application/json',
+        'Accept: application/json'
+    )
+);
+$result = curl_exec($ch);
+
+
 // Test of data goed doorkomt.
 //<<<<<<< Updated upstream
 // echo "Email: $email, SLA: $servicelevel, CPU: $cpu, Memory: $memory, Diskspace: $diskspace, VM-Name: $vmname, OS:  $operatingsystem, Key: $activationkey";
