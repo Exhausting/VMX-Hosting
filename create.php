@@ -7,6 +7,32 @@ if (isset($_SESSION["login"]) && $_SESSION["login"] == true){ ?>
   <html>
   <head>
     <?php include('ref/head.php') ?>
+
+<script type="text/javascript">
+$('#Servicelevel').on('change', function(){
+   console.log($('#Servicelevel').val());
+    $('#CPU').html('');
+    $('#Memory').html('');
+    $('#Storage').html('');
+
+    if($('#Servicelevel').val()==1){
+        $('#Cpu').append('<option value="1">1</option>');
+        $('#Memory').append('<option value="1">1</option>');
+        $('#Storage').append('<option value="1">100</option>');
+
+    }else if($('#Servicelevel').val()==2){
+        $('#CPU').append('<option value="2">2</option>');
+        $('#Memory').append('<option value="2">4</option>');
+        $('#Storage').append('<option value="2">150</option>');
+
+    }else if($('#Servicelevel').val()==3){
+        $('#CPU').append('<option value="3">4</option>');
+        $('#Memory').append('<option value="3">8</option>');
+        $('#Storage').append('<option value="3">100</option>');
+    }
+});
+</script>
+
   </head>
   <body>
   <?php include('ref/nav-bar.php') ?>
@@ -39,43 +65,40 @@ if (isset($_SESSION["login"]) && $_SESSION["login"] == true){ ?>
           <h2>Hardware Settings</h2>
           <div class="form-group">
             <label for="serviceLevel">Select Service Level:</label>
-            <select class="form-control" id="serviceLevel" name="service_level" required>
+            <select class="form-control" id="ServiceLevel" name="service_level" required>
               <option disabled selected value> -- select an option -- </option>
-              <option value="1">Low</option>
-              <option value="2">Medium</option>
-              <option value="3">High</option>
-            </select>
+              <option value="1">Package-1-Low</option>
+              <option value="2">Package-2-Medium</option>
+              <option value="3">Package-3-High</option>
+</select>
           </div>
           <div class="form-group">
             <label for="cpu">Number of cores:</label>
-            <select class="form-control" id="cpu" name="cpu" required>
+            <select class="form-control" id="Cpu" name="cpu" required>
               <option disabled selected value> -- select an option -- </option>
-              <option>1</option>
-              <option>2</option>
-              <option>4</option>
-            </select>
+              <select id="CPU">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">4</option>
+    </select>
           </div>
           <div class="form-group">
             <label for="memory">Ammount of Memory:</label>
-            <select class="form-control" id="memory" name="memory" required>
+            <select class="form-control" id="Memory" name="memory" required>
               <option disabled selected value> -- select an option -- </option>
-              <option value="1000">1 GB</option>
-              <option value="2000">2 GB</option>
-              <option value="4000">4 GB</option>
-              <option value="8000">8 GB</option>
-              <option value="16000">16 GB</option>
-            </select>
+              <option value="1">1GB</option>
+              <option value="2">4GB</option>
+              <option value="3">8GB</option>
+    </select>
           </div>
           <div class="form-group">
             <label for="disk_space">Ammount of Disk Space:</label>
-            <select class="form-control" id="disk_space" name="disk_space" required>
+            <select class="form-control" id="Storage" name="disk_space" required>
               <option disabled selected value> -- select an option -- </option>
-              <option value="100">100 GB</option>
-              <option value="250">250 GB</option>
-              <option value="500">500 GB</option>
-              <option value="750">750 GB</option>
-              <option value="1000">1000 GB</option>
-            </select>
+              <option value="1">100GB SAS</option>
+              <option value="2">150GB SAS</option>
+              <option value="3">100GB SSD</option>
+      </select>
           </div>
         </div>
         <div class="col-md-7">
