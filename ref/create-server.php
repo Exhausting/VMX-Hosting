@@ -4,7 +4,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 session_start();
-
+echo "test1";
 require 'startdb.php';
 
 // Test if a connection can be made.
@@ -33,6 +33,7 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
         'Accept: application/json'
     )
 );
+echo "test2";
 $result = curl_exec($ch);
 $errors = curl_error($ch);
 $response = curl_getinfo($ch, CURLINFO_HTTP_CODE);
@@ -41,7 +42,7 @@ echo "<br>Errors:  ". $errors;
 echo "<br>Http error code:  ".$response;
 echo "<br>URL: ".$url;
 //We should remove this 
-
+echo "test3";
 $stmt = $conn->prepare("INSERT INTO Customer_server (Email, Servicelevel, Cpu, Memory, Diskspace, Vmnaam, Operatingsystem, Activationkey) VALUES (?,?,?,?,?,?,?,?)");
 
 $stmt->bind_param("ssssssss", $email, $servicelevel, $cpu, $memory, $diskspace, $vmname, $operatingsystem, $activationkey);
