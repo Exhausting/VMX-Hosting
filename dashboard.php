@@ -9,7 +9,6 @@ $query = mysqli_query($conn, "SELECT * FROM Customer_server WHERE Email = '$emai
 if (isset($_SESSION["login"]) && $_SESSION["login"] == true){ ?>
   <html>
   <head>
-    <title>Dashboard</title>
     <?php include('ref/head.php') ?>
   </head>
   <body>
