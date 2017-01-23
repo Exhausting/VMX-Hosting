@@ -22,9 +22,9 @@ $operatingsystem = $_POST["operating_system"];
 $activationkey = $_POST["activation_key"];
 
 // Test of data goed doorkomt.
-// echo "Email: $email, SLA: $servicelevel, CPU: $cpu, Memory: $memory, Diskspace: $diskspace, VM-Name: $vmname, OS:  $operatingsystem, Key: $activationkey";
+ echo "Email: $email, SLA: $servicelevel, CPU: $cpu, Memory: $memory, Diskspace: $diskspace, VM-Name: $vmname, OS:  $operatingsystem, Key: $activationkey";
 
-$stmt = $conn->prepare("INSERT INTO Customer_server (Email, Servicelevel, Cpu, Memory, Diskspace, Vmnaam, Operatingsystem, Activationkey) VALUES (?,?,?,?,?,?,?,?,?)");
+$stmt = $conn->prepare("INSERT INTO Customer_server (Email, Servicelevel, Cpu, Memory, Diskspace, Vmnaam, Operatingsystem, Activationkey) VALUES (?,?,?,?,?,?,?,?)");
 
 $stmt->bind_param('siiiisis', $email, $servicelevel, $cpu, $memory, $diskspace, $vmname, $operatingsystem, $activationkey);
 
@@ -58,10 +58,9 @@ $result = $stmt->execute();
     </body>
     </html>
 
-    <?php 
+    <?php
     header( "refresh:2;url=/dashboard.php" );
   }
-
 
 $stmt->close();
 $conn->close();
