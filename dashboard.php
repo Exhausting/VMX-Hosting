@@ -42,8 +42,7 @@ if (isset($_SESSION["login"]) && $_SESSION["login"] == true){ ?>
                   <div><p><b>Service Level: </b></p></div>                          
                   <div><p><b>CPU:           </b></p></div>
                   <div><p><b>Memory:        </b></p></div> 
-                  <div><p><b>Storage:       </b></p></div>
-                  <div><p><b>Licensekey:    </b></p></div>                           
+                  <div><p><b>Storage:       </b></p></div>                      
                 </div>
                 <div class="col2">
                   <?php if ($row['Servicelevel'] == '1') {
@@ -54,7 +53,7 @@ if (isset($_SESSION["login"]) && $_SESSION["login"] == true){ ?>
                     ?> <div><p>High</p></div><?php
                   } ?>
                   <div><p><?php echo $row['Cpu'] ?></p></div>
-                  <div><p><?php echo $row['Memory'] ?> GB</p></div>   
+                  <div><p><?php echo $row['Memory'] ?> MB</p></div>   
                   <div><p><?php echo $row['Diskspace'] ?> GB</p></div>
                 </div>
               </div> <?php
