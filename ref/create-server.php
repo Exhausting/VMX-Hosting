@@ -21,31 +21,6 @@ $vmname = $_POST["vm_name"];
 $operatingsystem = $_POST["operating_system"];
 $activationkey = $_POST["activation_key"];
 
-
-
-// Create the Virtual machine using the API
-
-$url = 'http://api.vmxhosting.nl:8080/yes/domain?vmName='.$vmname.'&memory='.$memory.'&vmImage=/home/jurjen/Downloads/CentOS-7-x86_64-Minimal-1611.iso&storage='.$diskspace;
-$ch = curl_init($url);
-curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-        'Content-Type: application/json',
-        'Accept: application/json'
-    )
-);
-$result = curl_exec($ch);
-
-
-// Test of data goed doorkomt.
-//<<<<<<< Updated upstream
-// echo "Email: $email, SLA: $servicelevel, CPU: $cpu, Memory: $memory, Diskspace: $diskspace, VM-Name: $vmname, OS:  $operatingsystem, Key: $activationkey";
-//=======
-
-
- echo "Email: $email, SLA: $servicelevel, CPU: $cpu, Memory: $memory, Diskspace: $diskspace, VM-Name: $vmname, OS:  $operatingsystem, Key: $activationkey";
-//>>>>>>> Stashed changes
-
 $stmt = $conn->prepare("INSERT INTO Customer_server (Email, Servicelevel, Cpu, Memory, Diskspace, Vmnaam, Operatingsystem, Activationkey) VALUES (?,?,?,?,?,?,?,?)");
 
 $stmt->bind_param("ssssssss", $email, $servicelevel, $cpu, $memory, $diskspace, $vmname, $operatingsystem, $activationkey);
@@ -54,8 +29,8 @@ $stmt->bind_param("ssssssss", $email, $servicelevel, $cpu, $memory, $diskspace, 
 $result = $stmt->execute();
 
   if ($result === TRUE) {
-  ?>
-  <!DOCTYPE html>
+    ?>
+    <!DOCTYPE html>
     <html>
 
     <head>
@@ -76,14 +51,40 @@ $result = $stmt->execute();
       </div>
     </div>
 
-    <?php include("footer.php") ?>
     </body>
     </html>
 
     <?php
-    header( "refresh:2;url=/dashboard.php" );
+    header( "refresh:2;url=../dashboard.php" );
   }else {
-    printf("Errormessage: %s\n", $mysqli->error);
+    ?>
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+      <title>Virtual machine creation failed!</title>
+      <?php include('head.php') ?>
+    </head>
+    <body>
+    <?php include('nav-bar.php') ?>
+    <div class="container-float">
+      <div class="row">
+        <div class="col-sm-3 col-xs-2"></div>
+        <div class="col-sm-6 col-xs-8">
+          <div id="homeHeader">
+            <h1>Oops! Something went wrong! :-(</h1>
+            <h3>Virtual Machine creation failed. Please try again...</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </body>
+    </html>
+
+    <?php
+    header( "refresh:2;url=../dashboard.php" );
+  }
 }
 
 
