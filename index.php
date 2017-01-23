@@ -79,7 +79,7 @@ $title = 'Home';
           <p class="text-info">
             <p><b>CPU:    </b> 2</p>
             <p><b>Memory: </b> 4GB</p>
-            <p><b>Storage:</b> 500GB</p></p>
+            <p><b>Storage:</b> 150GB</p></p>
           <a class="btn btn-info pull-center" href="create.php" role="button">Create</a>
         </section>
 
@@ -89,7 +89,7 @@ $title = 'Home';
           <p class="text-info">
             <p><b>CPU:    </b> 4</p>
             <p><b>Memory: </b> 8GB</p>
-            <p><b>Storage:</b> 1000GB</p></p>
+            <p><b>Storage:</b> 100GB</p></p>
           <a class="btn btn-info pull-center" href="create.php" role="button">Create</a>
         </section>
       <?php } else{ ?>
@@ -109,7 +109,7 @@ $title = 'Home';
           <p class="text-info">
               <p><b>CPU:    </b> 2</p>
               <p><b>Memory: </b> 4GB</p>
-              <p><b>Storage:</b> 500GB</p></p>
+              <p><b>Storage:</b> 150GB</p></p>
           <a class="btn btn-info pull-right" href="signup.php" role="button">Go</a>
         </section>
 
@@ -119,7 +119,7 @@ $title = 'Home';
           <p class="text-info">
               <p><b>CPU:    </b> 4</p>
               <p><b>Memory: </b> 8GB</p>
-              <p><b>Storage:</b> 1000GB</p></p>
+              <p><b>Storage:</b> 100GB</p></p>
           <a class="btn btn-info pull-right" href="signup.php" role="button">Go</a>
         </section>
       <?php } ?>
