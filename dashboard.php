@@ -54,8 +54,8 @@ if (isset($_SESSION["login"]) && $_SESSION["login"] == true){ ?>
                     ?> <div><p>High</p></div><?php
                   } ?>
                   <div><p><?php echo $row['Cpu'] ?></p></div>
-                  <div><p><?php echo $row['Memory'] ?></p></div>   
-                  <div><p><?php echo $row['Diskspace'] ?></p></div>
+                  <div><p><?php echo $row['Memory'] ?> GB</p></div>   
+                  <div><p><?php echo $row['Diskspace'] ?> GB</p></div>
                 </div>
               </div> <?php
             }
