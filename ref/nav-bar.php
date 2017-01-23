@@ -1,4 +1,5 @@
 <?php
+$title = $_SESSION['title'];
 
 //kijk als de sessie is gestart & kijk als de login sessie true is. info komt uit login.php
 if (isset($_SESSION["login"]) && $_SESSION["login"] == true){ ?>
