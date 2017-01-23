@@ -9,7 +9,7 @@ if (isset($_SESSION["login"]) && $_SESSION["login"] == true){ ?>
     <?php include('ref/head.php') ?>
 
 <?php
-echo <script type="text/javascript">
+echo" <script type="text/javascript">
 $('#Servicelevel').on('change', function(){
    console.log($('#Servicelevel').val());
     $('#Cpu').html('');
@@ -32,7 +32,7 @@ $('#Servicelevel').on('change', function(){
         $('#Storage').append('<option value="3">100</option>');
     }
 });
-</script>;
+</script>";
 ?>
 
   </head>
