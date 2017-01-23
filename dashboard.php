@@ -4,7 +4,7 @@ session_start();
 $title = 'Dashboard';
 require 'ref/startdb.php';
 $email = $_SESSION['email'];
-$query = mysqli_query($conn, "SELECT * FROM customer_server WHERE Email = '$email'");
+$query = mysqli_query($conn, "SELECT * FROM Customer_server WHERE Email = '$email'");
 
 if (isset($_SESSION["login"]) && $_SESSION["login"] == true){ ?>
   <html>
