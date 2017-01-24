@@ -25,8 +25,7 @@ $operatingsystem = $_POST["operating_system"];
 $activationkey = $_POST["activation_key"];
 
 $url = 'http://10.0.1.102:28080/yes/domain?vmName='.$vmname.'&memory='.$memory.'&vmImage=/home/jurjen/Downloads/CentOS-7-x86_64-Minimal-1611.iso&storage='.$diskspace;
-echo "<br>URL replace: " + 'http://10.0.1.102:28080/yes/domain?vmName='.$vmname.'&memory='.$memory.'&vmImage=/home/jurjen/Downloads/CentOS-7-x86_64-Minimal-1611.iso&storage='.$diskspace;
-echo "<br>URL edit: ".$url;
+
 $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
